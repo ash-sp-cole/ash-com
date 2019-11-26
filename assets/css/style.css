@@ -5,3 +5,23 @@ body {
     background-repeat: no-repeat;
 
 }
+
+main {
+    color: white;
+}
+
+a { color: whitesmoke;}
+
+h1 {
+
+    text-align: right;
+}
+
+#jumbo{
+    opacity: 0.5;
+    
+margin-top: 250px;
+}
+.jumbo:hover {
+    opacity: 0.9;
+}
