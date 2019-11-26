@@ -1,4 +1,7 @@
 body {
-color: white;
+
+    background-image: url("mist.jpeg");
+    background-size: auto;
+    background-repeat: no-repeat;
 
 }
