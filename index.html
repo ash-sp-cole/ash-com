@@ -69,8 +69,9 @@ a { color: whitesmoke;}
     <div class="jumbotron jumbotron-fluid" id="jumbo">
             <div class="container">
               <h1 class="display-4">Welcome  
-                <!-- Floating TAB ============================================================================================ -->
+ <!-- Floating TAB ============================================================================================ -->
                 
+ <div class="centerBody">
                               <a class="btn-floating pulse" onclick="discover()"> <i class="large material-icons">face</i></a>
                 
                             </div>
@@ -85,15 +86,46 @@ a { color: whitesmoke;}
                               <!-- Tap Target Structure -->
                               <div class="tap-target" data-target="fab_button">
                                 <div class="tap-target-content">
-                                  <h5>Contact me:</h5>
-                                  <p>Ash@ash-sp-cole.com</p>
-                                </div>
-                              </div>
+                                  <div class="row"></div>
+                                    <div class="col s12 m7">
+                                      <div class="card">
+                                        <div class="card-image">
+                                          <img src="./assets/images/birdpres.PNG">
+                                          <span class="card-title">Card Title</span>
+                                        </div>
+                                        <div class="card-content">
+                                          <p>Thank you for visiting my Page, feel free to contact me</p>
+                                        </div>
+                                     
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                            
+                            
+                             
                             
                               <p class="lead"></p>
                 
                            </h1>
-    </div>
+<!-- COLLAPSIBLE ============================================================================================ -->
+
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">camera_front</i>About me</div>
+      <div class="collapsible-body"><span></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">comment</i>Blog</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Google Coding / Hacker Rank</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
+   
 <!-- MODAL FOOTER ============================================================================================ -->
 
   <!-- Modal Trigger -->
@@ -114,7 +146,7 @@ a { color: whitesmoke;}
         </div>
       </li>
       <li>
-        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <img src="assets/images/birdpres.PNG"> <!-- random image -->
         <div class="caption left-align">
           <h3>Left Aligned Caption</h3>
           <h5 class="light black-text text-lighten-3">Here's our small slogan.</h5>
@@ -145,7 +177,9 @@ a { color: whitesmoke;}
 </div>
             </div>
         
-
+          </div>
+        </div>
+      </div>
 <script>
           
  $(document).ready(function(){
@@ -187,6 +221,10 @@ function discover() {
   instance.open();
   
 }
+        
+$(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
         
 </script>
 </body>
