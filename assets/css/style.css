@@ -18,12 +18,16 @@ h1 {
 }
 
 #jumbo{
-    opacity: 0.9;
+    background: none;
     
 margin-top: 250px;
 }
 .jumbo:hover {
     opacity: 0.9;
+}
+
+.btn {
+    background: none;
 }
 
 h3{
@@ -40,4 +44,10 @@ h5{
 #footer{
 
     opacity: 1.0;
+}
+
+#toolbar{
+
+float: left;
+
 }
