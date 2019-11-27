@@ -18,10 +18,26 @@ h1 {
 }
 
 #jumbo{
-    opacity: 0.5;
+    opacity: 0.9;
     
 margin-top: 250px;
 }
 .jumbo:hover {
     opacity: 0.9;
+}
+
+h3{
+    color: black;
+
+}
+
+
+h5{
+    color: black;
+
+}
+
+#footer{
+
+    opacity: 1.0;
 }

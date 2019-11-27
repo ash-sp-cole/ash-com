@@ -20,7 +20,8 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title>Ash-sp-Cole.com</title>
 <style>
@@ -63,33 +64,60 @@ a { color: whitesmoke;}
       </nav>
     </div>
 
+<!-- Jumbotron ============================================================================================ -->
 
     <div class="jumbotron jumbotron-fluid" id="jumbo">
             <div class="container">
-              <h1 class="display-4">Welcome</h1>
-              
+              <h1 class="display-4">Welcome  
+                <!-- Floating TAB ============================================================================================ -->
+                
+                              <a class="btn-floating pulse" onclick="discover()"> <i class="large material-icons">face</i></a>
+                
+                            </div>
+                            
+                            <div class="fixed-action-btn">
+                              <a class="btn-floating btn-large red">
+                                <i id="fab_button" class="large material-icons">...</i>
+                              </a>
+                            
+                            </div>
+                            
+                              <!-- Tap Target Structure -->
+                              <div class="tap-target" data-target="fab_button">
+                                <div class="tap-target-content">
+                                  <h5>Contact me:</h5>
+                                  <p>Ash@ash-sp-cole.com</p>
+                                </div>
+                              </div>
+                            
+                              <p class="lead"></p>
+                
+                           </h1>
+    </div>
+<!-- MODAL FOOTER ============================================================================================ -->
+
   <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Current projects</a>
 
   <!-- Modal Structure -->
   <div id="modal1" class="modal bottom-sheet">
     <div class="modal-content">
       <h4>Modal Header</h4>
     
-  <div class="slider">
+  <div class="slider" id="footer">
     <ul class="slides">
       <li>
-        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <img src="assets/images/birdpres.PNG"> <!-- random image -->
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h3>My Projects!</h3>
+          <h5 class="light black-text text-lighten-3">A small sample of my work.</h5>
         </div>
       </li>
       <li>
         <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
         <div class="caption left-align">
           <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <h5 class="light black-text text-lighten-3">Here's our small slogan.</h5>
         </div>
       </li>
       <li>
@@ -114,9 +142,10 @@ a { color: whitesmoke;}
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
   </div>
-          
+</div>
             </div>
-          </div>
+        
+
 <script>
           
  $(document).ready(function(){
@@ -129,6 +158,35 @@ a { color: whitesmoke;}
 $(document).ready(function(){
     $('.slider').slider();
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var options = {};
+    
+    // load fab
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, options);
+    
+    // load feature discovery
+    var elems = document.querySelectorAll('.tap-target');
+    var instances = M.TapTarget.init(elems, options);
+    
+    // show feature discovery
+    //instances[0].open();
+    
+
+  });
+
+function discover() {
+  
+  var elem = document.querySelectorAll('.tap-target');
+  console.log('elem', elem);
+  
+  var instance = M.TapTarget.getInstance(elem[0]);
+  console.log('getInstance', instance);
+  
+  instance.open();
+  
+}
         
 </script>
 </body>
