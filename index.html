@@ -68,10 +68,10 @@
             <i class="large material-icons">menu</i>
           </a>
           <ul>
-            <li><a class="btn-floating red" class="center-align"><i class="material-icons">insert_chart</i></a></li>
-            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            <li><a class="btn-floating grey"><i class="large material-icons">phone</i></a></li>
+            <li><a class="btn-floating grey btn modal-trigger" href="#modalPop" class="center-align" ><i class="large material-icons">burst_mode</i></a></li>
+            <li><a class="btn-floating grey "><i class="material-icons">insert_comment</i></a></li>
+            <li><a class="btn-floating  light-blue"><i class="material-icons">home</i></a></li>
           </ul>
         </div>
               
@@ -84,31 +84,92 @@
 
 
 
-<!-- ========================================================= TOOLBAR ================ -->
+<!-- 
+      MODAL FOOTER ============================================================================================
+ -->
+
+  
+
+ <!-- <a class="waves-effect waves-light btn modal-trigger">Current projects</a> -->
+
+  <div id="modalPop" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+    
+  <div class="slider" id="footer">
+    <ul class="slides">
+      <li>
+        <img src="assets/images/birdpres.PNG">
+        <div class="caption center-align">
+          <h3>My Projects!</h3>
+          <h5 class="light black-text text-lighten-3">A small sample of my work.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="assets/images/birdpres.PNG"> 
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light black-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> 
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> 
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+</div>
+            </div> 
   
 
 
   <!-- ============= SCRIPTS =========================================================== -->
   <script>
 
-    $(document).ready(function () {
+   
 
       // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-
-   $('#modal1').modal();
-
-    });
-    $(document).ready(function () {
-      $('.slider').slider();
-    });
+      $(document).ready(function(){
+	$('#modalPop').modal({
+    dismissible: false
+  });
+});
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, {
-       hoverEnabled: false
+  
+$(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton({
+
+      dismissible: false,
+      hoverEnabled: false
+
+
     });
   });
+
+
+
+
+   $('.slider').slider();
+  
+  
+
         
  
 //  ==================================== WELCOME ANIMATION ==========================================

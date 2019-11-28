@@ -61,7 +61,7 @@ float: left;
 .text {
     position: absolute;
     width: 450px;
-    left: 50%;
+    left: 55%;
     margin-left: -225px;
     height: 40px;
     top: 50%;
@@ -85,7 +85,7 @@ float: left;
     position: relative;
   
 
-    
+
     transform: translateZ(25px);
     transform-origin: 50% 50% 25px;
   }
