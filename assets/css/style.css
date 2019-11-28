@@ -46,6 +46,12 @@ h5{
 
 }
 
+.tap-target-wrapper{
+
+height: 0 !important;
+
+}
+
 #footer{
 
     opacity: 1.0;
