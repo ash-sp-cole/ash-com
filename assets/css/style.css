@@ -10,7 +10,10 @@ main {
     color: white;
 }
 
-a { color: whitesmoke;}
+a { 
+    color: whitesmoke;
+    z-index: 10;
+}
 
 h1 {
 
@@ -55,9 +58,12 @@ float: left;
 .fixed-action-btn{
     left:50px;/*desired value*/
    top: 50px;
+   z-index: -1;
     }
 
-    
+    a {
+        color: whitesmoke;
+      }
 .text {
     position: absolute;
     width: 450px;
