@@ -49,11 +49,6 @@ h5{
     opacity: 1.0;
 }
 
-#toolbar{
-
-float: left;
-
-}
 
 .fixed-action-btn{
     left:50px;/*desired value*/
@@ -61,6 +56,9 @@ float: left;
    z-index: -1;
     }
 
+ 
+
+    }
     a {
         color: whitesmoke;
       }

@@ -64,15 +64,15 @@
 
     </div>
     <div class="fixed-action-btn " class="center-align">
-      <a class="btn-floating btn-large pulse light-blue">
-        <i class="large material-icons">menu</i>
+      <a class="btn-floating btn-large pulse light-blue btn-large">
+        <i class="large material-icons" >menu</i>
       </a>
       <ul>
-        <li><a class="btn-floating grey" id="menu" tap-target.open()><i class="large material-icons">phone</i></a></li>
-        <li><a class="btn-floating grey btn modal-trigger" href="#modalPop" class="center-align"><i
+        <li><a class="btn-floating btn-large grey" id="menu" tap-target.open()><i class="large material-icons">phone</i></a></li>
+        <li><a class="btn-floating  btn-large grey btn modal-trigger" href="#modalPop" class="center-align"><i
               class="large material-icons">burst_mode</i></a></li>
-        <li><a class="btn-floating grey "><i class="material-icons">insert_comment</i></a></li>
-        <li><a class="btn-floating  light-blue"><i class="material-icons">home</i></a></li>
+        <li><a class="btn-floating  btn-large grey" id="menu-about" tap-target-about.open() "><i class="material-icons">insert_comment</i></a></li>
+        <li><a class="btn-floating btn-large  light-blue"><i class="material-icons">home</i></a></li>
       </ul>
     </div>
 
@@ -144,7 +144,7 @@
 <div class="tap-target" data-target="menu">
   <div class="tap-target-content">
     
-    <div class="card">
+    <div class="card light-blue">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="./assets/css/Phone.jpg">
         </div>
@@ -152,7 +152,7 @@
           <span class="card-title activator grey-text text-darken-4">Ash-sp-cole<i class="material-icons right">expand_more</i></span>
           <p>Click for contact details</p>
         </div>
-        <div class="card-reveal">
+        <div class="card-reveal light-blue">
           <span class="card-title grey-text text-darken-4"><h4>Ash-sp-cole</h4><i class="material-icons right">close</i></span>
           <p><h3>Email : </h3> <h5>Ash @Ash-sp-cole.com</h5></p> <br>
           <p><h3>Phone : </h3> <h5>0151 - 2020 - 9181</h5> </p>
@@ -160,8 +160,7 @@
       </div>
   </div>
 </div>
-
-
+    
   <!-- ============= SCRIPTS =========================================================== -->
   <script>
 
@@ -178,10 +177,13 @@
 
 
     $(document).ready(function () {
+
+
       $('.fixed-action-btn').floatingActionButton({
 
         dismissible: false,
-        hoverEnabled: false
+        hoverEnabled: false,
+        direction: 'right' 
 
 
       });
@@ -197,6 +199,14 @@
   })  
 })
 
+
+$(document).ready(function () {
+  $('.tap-target-about').tapTarget()
+  
+  $('#menu-about').on('click', function() {
+     $('.tap-target-about').tapTarget('open')
+  })  
+})
 
     $('.slider').slider();
 
