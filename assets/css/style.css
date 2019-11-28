@@ -22,7 +22,7 @@ h1 {
 
 #jumbo{
     background: none;
-    
+    z-index: 5000;
 margin-top: 250px;
 }
 .jumbo:hover {
@@ -55,7 +55,7 @@ h5{
 .fixed-action-btn{
     left:50px;/*desired value*/
    top: 50px;
-   z-index: -1;
+   z-index: -1 !important;
     }
 
  
