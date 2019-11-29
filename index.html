@@ -203,22 +203,33 @@
     
 <ul class="collapsible">
   <li>
-    <div class="collapsible-header"><i class="material-icons">camera_front</i>About me</div>
+    <div class="collapsible-header"><i class="fas fa-user-tag"></i>About me</div>
     <div class="collapsible-body"><span style="color:black;">Lorem ipsum dolor sLorem ipsurem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dol</span></div>
   </li>
   <li>
-    <div class="collapsible-header"><i class="material-icons">comment</i>Blog</div>
-    <div class="collapsible-body"><span style="color:black;" >Lorem ipsum dolor sit ametLorem ipsum dolor sLorem ipsum dolor s.</span></div>
+    <div class="collapsible-header"><i class="fas fa-wind"></i>Blog</div>
+    <div class="collapsible-body"><span style="color:black;" ><!-- Dropdown Trigger -->
+      <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+    
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+       <br>
+        <li><a href="#!">Most Recent <i class="fas fa-blog"></i></a> </li>
+        <li class="divider" tabindex="-1"></li>
+        
+        <li><a href="#!"><i class="fas fa-school"></i>Imaginative Learning</a></li>
+        <li><a href="#!"><i class="fas fa-stethoscope"></i>Is there a Doctor on board</a></li>
+      </ul></span></div>
   </li>
   <li>
-    <div class="collapsible-header"><i class="material-icons">whatshot</i>Google Coding / Hacker Rank</div>
-    <div class="collapsible-body"><span style="color:black;">Lorem ipsum dolor sit aLorem ipsum dolor sLorem ipsum dolor smet.</span></div>
+    <div class="collapsible-header"><i class="fab fa-free-code-camp"></i>Google Coding / Open Source </div>
+    <div class="collapsible-body"><span style="color:black;"><a class="waves-effect" href="#!"><img src="https://www.codewars.com/users/ash-sp-cole/badges/micro"></a></span></div>
   </li>
 </ul> 
 
     <li><div class="divider"></div></li>
     <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!"><img src="https://www.codewars.com/users/ash-sp-cole/badges/micro"></a></li>
+    
   </ul>
   <!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
 
@@ -290,7 +301,8 @@
     $('.collapsible').collapsible();
   });
         
-
+  $('.dropdown-trigger').dropdown();
+        
 
     //  ==================================== WELCOME ANIMATION ==========================================
 

@@ -31,6 +31,12 @@ margin-top: 250px;
     opacity: 0.9;
 }
 
+
+.dropdown-content {
+
+  min-width: 350px !important;
+}
+
 .btn {
     background: none;
 }
