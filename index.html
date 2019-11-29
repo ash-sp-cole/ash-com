@@ -46,8 +46,8 @@
     <div class="container">
       <h1 class="display-4">Welcome
         <br>
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/ash-sp-cole" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ash-cole-web/" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
 
 
         <div class="text">
@@ -70,7 +70,7 @@
       <ul>
         <li><a class="btn-floating btn-large grey" id="menu" tap-target.open()><i class="fas fa-phone-alt"></i></a></li>
         <li><a class="btn-floating  btn-large grey btn modal-trigger" href="#modalPop" class="center-align"><i class="fas fa-images"></i></a></li>
-        <li><a class="btn-floating  btn-large grey" id="menu-about" tap-target-about.open() "><i class="fas fa-code"></i></a></li>
+        <li><a class="btn-floating  btn-large grey sidenav-trigger" href="#" data-target="slide-out"><i class="fas fa-code"></i></a></li>
         <li><a class="btn-floating btn-large  light-blue"><i class="material-icons">home</i></a></li>
       </ul>
     </div>
@@ -148,6 +148,11 @@
    <!-- Element Showed -->
 
 
+   
+  <!-- ============= CONTACT POPUP =========================================================== -->
+
+
+
   <!-- Tap Target Structure -->
   <div class="tap-target" data-target="menu">
     <div class="tap-target-content">
@@ -178,6 +183,48 @@
     </div>
   </div>
 
+
+  <!-- ============= SIDENAV =========================================================== -->
+
+  
+
+
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="assets/css/forest.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="assets/images/birdpres.PNG"></a>
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="https://github.com/ash-sp-cole" target="_blank"><i class="fab fa-github"></i>  </a>
+      <a href="https://www.linkedin.com/in/ash-cole-web/" target="_blank"> <i class="fab fa-linkedin-in"></i> </a></li>
+    
+<ul class="collapsible">
+  <li>
+    <div class="collapsible-header"><i class="material-icons">camera_front</i>About me</div>
+    <div class="collapsible-body"><span style="color:black;">Lorem ipsum dolor sLorem ipsurem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dolor sLorem ipsum dol</span></div>
+  </li>
+  <li>
+    <div class="collapsible-header"><i class="material-icons">comment</i>Blog</div>
+    <div class="collapsible-body"><span style="color:black;" >Lorem ipsum dolor sit ametLorem ipsum dolor sLorem ipsum dolor s.</span></div>
+  </li>
+  <li>
+    <div class="collapsible-header"><i class="material-icons">whatshot</i>Google Coding / Hacker Rank</div>
+    <div class="collapsible-body"><span style="color:black;">Lorem ipsum dolor sit aLorem ipsum dolor sLorem ipsum dolor smet.</span></div>
+  </li>
+</ul> 
+
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!"><img src="https://www.codewars.com/users/ash-sp-cole/badges/micro"></a></li>
+  </ul>
+  <!-- <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+
+  
+
+
   <!-- ============= SCRIPTS =========================================================== -->
   <script>
 
@@ -199,7 +246,7 @@
       $('.fixed-action-btn').floatingActionButton({
 
         dismissible: false,
-        hoverEnabled: false,
+        hoverEnabled: true,
         direction: 'right'
 
 
@@ -234,7 +281,15 @@
     });
 
 
+    $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+        
 
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+        
 
 
     //  ==================================== WELCOME ANIMATION ==========================================
