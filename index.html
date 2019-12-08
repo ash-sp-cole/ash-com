@@ -96,7 +96,7 @@
               class="fas fa-images"></i></a></li>
         <li><a class="btn-floating  btn-large grey sidenav-trigger" href="#" data-target="slide-out"><i
               class="fas fa-code"></i></a></li>
-        <li><a class="btn-floating btn-large  light-blue"><i class="material-icons">home</i></a></li>
+        <li><a class="btn-floating btn-large  light-blue sidenav-trigger" href="#" data-target="slide-out"><i class="material-icons">home</i></a></li>
       </ul>
     </div>
 
@@ -119,6 +119,7 @@
 
         <div class="slider" id="footer">
           <ul class="slides">
+
             <li>
               <img src="assets/images/birdpres.PNG">
               <div class="caption center-align">
@@ -249,19 +250,19 @@
       <li></span></div>
       </li>
       <li>
-        <div class="collapsible-header"><i class="fas fa-wind"></i>Blog</div>
+        <div class="collapsible-header"><i class="fas fa-wind"></i>Blog  <span class="new badge">1</span></div>
         <div class="collapsible-body"><span style="color:black;">
             <!-- Dropdown Trigger -->
             <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
 
-            <!-- Dropdown Structure -->
+            <!-- Dropdown Structure --> 
             <ul id='dropdown1' class='dropdown-content'>
               <br>
-              <li><a href="#!">Most Recent <i class="fas fa-blog"></i></a> </li>
+              <li><a class="modal-trigger " href="#modal1"> Most Recent</a></li>
               <li class="divider" tabindex="-1"></li>
 
               <li><a href="#!"><i class="fas fa-school"></i>Imaginative Learning</a></li>
-              <li><a href="#!"><i class="fas fa-stethoscope"></i>Is there a Doctor on board</a></li>
+              <li><a class="modal-trigger " href="#modal1"> <i class="fas fa-stethoscope "></i> Is there a Doctor on Board?</a></li>
             </ul>
           </span></div>
       </li>
@@ -296,6 +297,60 @@
 
   </ul>
 
+
+
+
+
+  <!-- ============= BLOG =========================================================== -->
+
+
+
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer  hoverable">
+    <div class="modal-content" id="modalBox">
+      
+
+
+        <img  src="assets/css/blogKid.jpeg" style="height:45%; width:55%; margin: auto;" >
+      <hr>
+      
+      <h4 class="card-panel teal lighten-2">Is there a Doctor on Board!?</h4>
+      <hr>
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+          <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+              <div class="col s2">
+                <img src="assets/css/blogKid.jpeg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+              </div>
+              <div class="col s10">
+                <span class="black-text">
+                   <h4> What do you want to be when you grow up?! A Doctor? An Astronaut? A programmer…          really? </h4> <br>
+                   <h5 style="line-height: 2;"> The strange part of this question is not that I want such an outlandish job, but that I am in fact 33 years old. Perhaps even too old to pass the tests at N.A.S.A., can you take asthma inhalers into space?
+
+                    As a child, the world is full of mystery. As soon as we start to observe, we begin to imitate. The very process of growing is intrinsically linked to following the development of others. Every morning I wake up, my beautiful newborn daughter looks at me and smiles. I smile back and we share a moment. Perhaps the smile started as imitation, perhaps it was always inherent, but what is clear it is her own and it is unique. This pattern will follow her throughout her life, observation, imitation, learning and sharing. This process will never change even into old age, yet the question of what we want to be when we grow up appears to have a time limit. Have we then at some point grown enough? Is what comes after trivial in comparison?	
+                  
+                    Having spent most of my ‘Adult’ life in the field of education, I undoubtedly will be a different programmer than someone who is fresh out of college, or decided after a few months out in space that the astronaut life really wasn't for them. It is these experiences that make us different and imbue our work with personality and individuality. Having faced so many inner questions when I decided on a career change and having spent many more hours in my new environment I can feel the constant struggle that comes with change. But hand in hand with something new, comes the wonder and thirst for learning that you feel as a child. Except this time, i have a little more experience to bring with me. 
+                  </h5>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+              
+      <p>
+</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+
+
+
   <!-- ============= SCRIPTS =========================================================== -->
   <script>
 
@@ -304,6 +359,7 @@
       $('#modalPop').modal({
       });
 
+      $('.modal').modal();
 
       $('.fixed-action-btn').floatingActionButton({
         dismissible: false,
@@ -335,6 +391,10 @@
       $('.collapsible').collapsible();
 
       $('.dropdown-trigger').dropdown();
+
+
+      $('.modal').modal('methodName');
+      $('.modal').modal('methodName', paramName);
 
     });
 
